@@ -16,6 +16,7 @@ require 'vindi/bill'
 require 'vindi/response_validator'
 require 'vindi/error'
 require 'vindi/normalizer'
+require 'vindi/transaction'
 
 module Vindi
 

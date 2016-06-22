@@ -1,0 +1,58 @@
+{
+  "transactions": [
+    {
+      "id": 441178,
+      "transaction_type": "charge",
+      "status": "rejected",
+      "amount": "1.0",
+      "installments": 1,
+      "gateway_message": "Autorização negada: 60",
+      "gateway_response_code": "60",
+      "gateway_authorization": "",
+      "gateway_transaction_id": "da5037d2-96a5-45ac-a43d-c95131af6f93",
+      "gateway_response_fields": {
+        "tid": "1071244628000000002A",
+        "pan": "pK2dAM/G6e92PorjglyWwO0RXqPIKoiS1+j0nkKVjBw=",
+        "nsu": "000002"
+      },
+      "fraud_detector_score": null,
+      "fraud_detector_status": null,
+      "fraud_detector_id": null,
+      "created_at": "2015-11-20T03:28:27.000-02:00",
+      "updated_at": "2015-11-20T03:28:49.000-02:00",
+      "payment_profile": {
+        "id": 178563,
+        "holder_name": "TESTE CIELO",
+        "registry_code": null,
+        "bank_branch": null,
+        "bank_account": null,
+        "card_expiration": "2022-12-31T23:59:59.000-02:00",
+        "card_number_first_six": "364901",
+        "card_number_last_four": "2661",
+        "token": "7043ac49-b4b8-4186-b019-3d7dc0fa7f01",
+        "created_at": "2015-11-20T03:28:27.000-02:00",
+        "payment_company": {
+          "id": 9,
+          "name": "Diners Club",
+          "code": "diners_club"
+        }
+      },
+      "charge": {
+        "id": 302079
+      },
+      "customer": {
+        "id": 194167,
+        "name": "Teste Cielo",
+        "email": "teste@teste.com",
+        "code": null
+      },
+      "payment_method": {
+        "id": 5141,
+        "public_name": "Cartão de crédito",
+        "name": "Cartão de crédito",
+        "code": "credit_card",
+        "type": "PaymentMethod::CreditCard"
+      }
+    }
+  ]
+}

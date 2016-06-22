@@ -10,7 +10,16 @@ module Vindi
           end
         end
 
-        alias :all :list
+        def all(params = {})
+          ret = []
+          page = 0
+          begin
+            page += 1
+            last_page = list params.merge(page: page, per_page: 50)
+            ret.concat last_page
+          end while last_page.length > 0
+          ret
+        end
       end
 
       def self.included(receiver)
