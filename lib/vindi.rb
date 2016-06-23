@@ -18,8 +18,11 @@ require 'vindi/error'
 require 'vindi/normalizer'
 require 'vindi/transaction'
 
+# main module
 module Vindi
-
+  # configuration module for Vindi:
+  # This enables the following to work:
+  # => Vindi.configure { |vindi| vindi.api_key = 'api_key' }
   module Configuration
     attr_accessor :api_key
 
@@ -29,4 +32,13 @@ module Vindi
   end
 
   extend Configuration
+
+  def self.const_missing(const_name)
+    klass = const_set(const_name, Class.new(Base))
+    klass.include API::Create
+    klass.include API::List
+    klass.include API::Delete
+    klass.include API::Update
+    klass.include API::Get
+  end
 end
