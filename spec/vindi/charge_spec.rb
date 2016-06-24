@@ -11,9 +11,7 @@ describe Vindi::Charge do
 
   describe '.all' do
     context 'given a successful request' do
-      subject do
-        described_class.all
-      end
+      subject { described_class.all }
 
       it { expect(subject).to be_a(Array) }
 
@@ -21,11 +19,17 @@ describe Vindi::Charge do
     end
   end
 
+  describe 'times should be parsed' do
+    context 'given a successful request' do
+      subject { described_class.all.first }
+
+      it { expect(subject.due_at_time).to be_a Time }
+    end
+  end
+
   describe '.paid_charges_per_users' do
     context 'given a successful request' do
-      subject do
-        described_class.paid_charges_per_users
-      end
+      subject { described_class.paid_charges_per_users }
 
       it { expect(subject).to be_a(Hash) }
 

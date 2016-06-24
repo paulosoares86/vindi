@@ -1,4 +1,5 @@
-require "hashie"
+require 'time'
+require 'hashie'
 
 module Vindi
   class Base < ::Hashie::Mash
@@ -29,7 +30,15 @@ module Vindi
     def self.reponse_has_key?
       true
     end
+    
+    def method_missing(message, *args, &block)
+      if message =~ /(.*)_time$/
+        time_string = send($1)
+        Time.parse(time_string) if time_string
+      else
+        super
+      end
+    end
 
   end
 end
-
