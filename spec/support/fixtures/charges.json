@@ -1,71 +1,135 @@
 {
-  "charges": [
-    {
-      "id": 758223,
-      "amount": "1000.0",
-      "status": "pending",
-      "due_at": "2016-02-26T23:59:59.000-03:00",
-      "paid_at": null,
-      "installments": 10,
-      "attempt_count": 1,
-      "next_attempt": null,
-      "print_url": null,
-      "created_at": "2016-02-23T14:35:35.000-03:00",
-      "updated_at": "2016-03-06T09:51:15.000-03:00",
-      "last_transaction": {
-        "id": 1700421,
-        "transaction_type": "charge",
-        "status": "rejected",
+    "charges": [{
+        "id": 758223,
         "amount": "1000.0",
+        "status": "pending",
+        "due_at": "2016-02-26T23:59:59.000-03:00",
+        "paid_at": null,
         "installments": 10,
-        "gateway_message": "Autorização negada: Saldo insuficiente",
-        "gateway_response_code": "51",
-        "gateway_authorization": "",
-        "gateway_transaction_id": "hash_gateway_transaction_id",
-        "gateway_response_fields": {
-          "tid": "1234",
-          "pan": "sdfghjk/jkhhjakshjksdahjkdsahjk=",
-          "nsu": "001401"
+        "attempt_count": 1,
+        "next_attempt": null,
+        "print_url": null,
+        "created_at": "2016-02-23T14:35:35.000-03:00",
+        "updated_at": "2016-03-06T09:51:15.000-03:00",
+        "last_transaction": {
+            "id": 1700421,
+            "transaction_type": "charge",
+            "status": "rejected",
+            "amount": "1000.0",
+            "installments": 10,
+            "gateway_message": "Autorização negada: Saldo insuficiente",
+            "gateway_response_code": "51",
+            "gateway_authorization": "",
+            "gateway_transaction_id": "hash_gateway_transaction_id",
+            "gateway_response_fields": {
+                "tid": "1234",
+                "pan": "sdfghjk/jkhhjakshjksdahjkdsahjk=",
+                "nsu": "001401"
+            },
+            "fraud_detector_score": null,
+            "fraud_detector_status": null,
+            "fraud_detector_id": null,
+            "created_at": "2016-03-06T09:51:15.000-03:00",
+            "payment_profile": {
+                "id": 333362,
+                "holder_name": "John Doe",
+                "registry_code": null,
+                "bank_branch": null,
+                "bank_account": null,
+                "card_expiration": "2019-02-28T23:59:59.000-03:00",
+                "card_number_first_six": "123456",
+                "card_number_last_four": "1234",
+                "token": "uid_token",
+                "created_at": "2016-03-06T09:51:15.000-03:00",
+                "payment_company": {
+                    "id": 1,
+                    "name": "MasterCard",
+                    "code": "mastercard"
+                }
+            }
         },
-        "fraud_detector_score": null,
-        "fraud_detector_status": null,
-        "fraud_detector_id": null,
-        "created_at": "2016-03-06T09:51:15.000-03:00",
-        "payment_profile": {
-          "id": 333362,
-          "holder_name": "John Doe",
-          "registry_code": null,
-          "bank_branch": null,
-          "bank_account": null,
-          "card_expiration": "2019-02-28T23:59:59.000-03:00",
-          "card_number_first_six": "123456",
-          "card_number_last_four": "1234",
-          "token": "uid_token",
-          "created_at": "2016-03-06T09:51:15.000-03:00",
-          "payment_company": {
-            "id": 1,
-            "name": "MasterCard",
-            "code": "mastercard"
-          }
+        "payment_method": {
+            "id": 5144,
+            "public_name": "Cartão de crédito",
+            "name": "Cartão de crédito",
+            "code": "credit_card",
+            "type": "PaymentMethod::CreditCard"
+        },
+        "bill": {
+            "id": 847956,
+            "code": null
+        },
+        "customer": {
+            "id": 465353,
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "code": null
         }
-      },
-      "payment_method": {
-        "id": 5144,
-        "public_name": "Cartão de crédito",
-        "name": "Cartão de crédito",
-        "code": "credit_card",
-        "type": "PaymentMethod::CreditCard"
-      },
-      "bill": {
-        "id": 847956,
-        "code": null
-      },
-      "customer": {
-        "id": 465353,
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "code": null
-      }
-    }
-  ]
+    }, {
+        "id": 758224,
+        "amount": "1000.0",
+        "status": "paid",
+        "due_at": "2016-02-26T23:59:59.000-03:00",
+        "paid_at": null,
+        "installments": 10,
+        "attempt_count": 1,
+        "next_attempt": null,
+        "print_url": null,
+        "created_at": "2016-02-23T14:35:35.000-03:00",
+        "updated_at": "2016-03-06T09:51:15.000-03:00",
+        "last_transaction": {
+            "id": 1700421,
+            "transaction_type": "charge",
+            "status": "rejected",
+            "amount": "1000.0",
+            "installments": 10,
+            "gateway_message": "Autorização negada: Saldo insuficiente",
+            "gateway_response_code": "51",
+            "gateway_authorization": "",
+            "gateway_transaction_id": "hash_gateway_transaction_id",
+            "gateway_response_fields": {
+                "tid": "1234",
+                "pan": "sdfghjk/jkhhjakshjksdahjkdsahjk=",
+                "nsu": "001401"
+            },
+            "fraud_detector_score": null,
+            "fraud_detector_status": null,
+            "fraud_detector_id": null,
+            "created_at": "2016-03-06T09:51:15.000-03:00",
+            "payment_profile": {
+                "id": 333362,
+                "holder_name": "John Doe",
+                "registry_code": null,
+                "bank_branch": null,
+                "bank_account": null,
+                "card_expiration": "2019-02-28T23:59:59.000-03:00",
+                "card_number_first_six": "123456",
+                "card_number_last_four": "1234",
+                "token": "uid_token",
+                "created_at": "2016-03-06T09:51:15.000-03:00",
+                "payment_company": {
+                    "id": 1,
+                    "name": "MasterCard",
+                    "code": "mastercard"
+                }
+            }
+        },
+        "payment_method": {
+            "id": 5144,
+            "public_name": "Cartão de crédito",
+            "name": "Cartão de crédito",
+            "code": "credit_card",
+            "type": "PaymentMethod::CreditCard"
+        },
+        "bill": {
+            "id": 847956,
+            "code": null
+        },
+        "customer": {
+            "id": 465353,
+            "name": "John Doe 2",
+            "email": "johndoe2@example.com",
+            "code": null
+        }
+    }]
 }
